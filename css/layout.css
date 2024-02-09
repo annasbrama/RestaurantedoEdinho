@@ -1,0 +1,45 @@
+/* GLOBAL */
+* {
+    --vine: #a30404;
+    --yellow: #fed40e;
+    --gray: #e5e5e5;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 93.75%; /* 100% -16ox | 93.75% - 15 px */
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--vine) url(../assets/img/bg_icons.svg);
+    /*configura a imagem de fundo fazendo com que ela se movimente junto com a página ou fique fixa*/
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: min(90vw, 88vw);
+    padding-top: 4rem;
+    margin: auto;
+}
+
+.img-fluid {
+    width: max(14vw, 100px);
+    object-fit: cover;
+}
+
+.flex-center-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
