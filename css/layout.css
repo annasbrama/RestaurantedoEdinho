@@ -6,7 +6,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 93.75%; /* 100% -16ox | 93.75% - 15 px */
+    font-size: 93.75%;
+    /* 100% -16ox | 93.75% - 15 px */
 }
 
 html {
@@ -27,7 +28,7 @@ body {
 }
 
 .container {
-    width: min(90vw, 88vw);
+    width: min(90vw, 800x);
     padding-top: 4rem;
     margin: auto;
 }
@@ -51,20 +52,10 @@ body {
 .text-center {
     text-align: center;
 }
+
 /* FIM resets gerais */
 
 /* HEADER */
-header ul li a {
-    padding: 10px;
-    color:var(--wine);
-    transition: all 0.3s;
-}
-
-header ul li a.item-menu:hover {
-    background: var(--wine);
-    color: var(--yellow);
-}
-
 header {
     text-align: center;
     display: flex;
@@ -81,7 +72,7 @@ header ul {
     border-radius: 2rem;
     padding: 12px 30px;
     height: 55px;
-    min-width: 800px;   
+    min-width: 800px;
 }
 
 header ul li {
@@ -96,6 +87,21 @@ a {
     text-decoration: none;
 }
 
+.box-arrow-down a{
+    color: var(--yellow);
+}
+
+header ul li a {
+    padding: 10px;
+    color: var(--vine);
+    transition: all 0.3s;
+}
+
+header ul li a.item-menu:hover {
+    background: var(--vine);
+    color: var(--yellow);
+}
+
 button {
     background: var(--yellow);
     cursor: pointer;
@@ -107,7 +113,7 @@ button {
     border-radius: 30px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.87);
 
-    color: var(--wine);
+    color: var(--vine);
     font-size: 1.8rem;
     text-transform: uppercase;
     font-family: "Rum Raisin", sans-serif;
@@ -116,7 +122,7 @@ button {
 
 button:hover {
     background: #fff;
-    color: var(--wine);
+    color: var(--vine);
     padding: 10px 50px;
 }
 
@@ -147,8 +153,8 @@ button:hover {
 }
 
 .description-banner {
-    position:relative;
-    top:-30px;
+    position: relative;
+    top: -30px;
     max-width: 380px;
 }
 
@@ -159,11 +165,65 @@ button:hover {
     font-family: "Rum Raisin", sans-serif;
 }
 
+/* :first-child = seleciona o primeiro filho dentro do elemento pai. :nth-child = permite especificar qual o elemento filho deseja ser selecionado. ex: :nth-child(2) irá selecionar o filho na segunda posição dentro do elemento pai*/
 .description-banner p:first-child {
     font-family: "Rum Raisin", sans-serif;
     font-size: 1.9rem;
 }
 
+.description-banner p {
+    font-size: 1.6rem;
+}
+
+.description-banner i {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
 .d-none img {
     max-width: 600px;
+    transition: all 0.3s;
 }
+
+
+.right-banner img:hover {
+    transform: scale(1.05);
+}
+
+.box-arrow-down {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.box-arrow-down i {
+    text-shadow: 1px 1px 20px #000;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.box-arrow-down i:hover, .controls-slide i:hover, .btn-cardapio:hover, .active {
+    opacity: 1;
+}
+
+.box-arrow-down {
+    padding: 0 0 4.5rem;
+}
+
+.controls-slide {
+    margin: auto;
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -2rem;
+}
+
+.controls-slide i {
+    font-size: 2rem;
+    color: var(--yellow);
+    opacity: .6;
+    cursor: pointer;
+    text-shadow: 1px 1px 20px #000;
+    transition: all ease .2s;
+}
+
