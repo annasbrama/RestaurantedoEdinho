@@ -152,7 +152,7 @@ body {
 }
 
 /*GALERIA*/
-.box-galeria {
+.box-galeria, #box-equipe {
     display: flex;
     justify-content: center;
     background: #e5e5e5 url(../assets/img/bg_icons.svg);
@@ -160,25 +160,75 @@ body {
     background-attachment: fixed;
     padding-bottom: 100px;
 }
-.container-fotos {
+.container-fotos, .container-equipe {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.box-fotos {
+.box-fotos, .box-fotos-equipes {
     display: grid;
     /*repeat() = define quantas colunas irão existir no grid o tamanho que cada coluna*/
     grid-template-columns: repeat(4,1fr);
     grid-gap: 45px;
     margin-top: 20px;
 }
-.box-galeria img {
+.box-galeria img, #box-equipe img {
     height: auto;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
 }
-.box-galeria  img:hover {
+.box-galeria img:hover, #box-equipes img:hover {
     transform: scale(1.05);
     filter:contrast(70%);
+}
+/*FOOTER*/
+footer{
+    background: #353535 url(../assets/img/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 4rem;
+}
+#contato {
+    display: flex;
+    flex-direction: column;
+}
+.box-info-contato {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: max(20vw, 480px);
+    padding: 15px;
+    margin-top: 25px;
+}
+#box-whats-delivery {
+    background: #fff;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+#box-whats-delivery img {
+    width: max(7vw, 110px);
+    position: absolute;
+    left: min(42vw, 550px);
+    transition: all 0.3s;
+}
+#box-whats-delivery img:hover {
+    /*!important= define como prioridade máxima para uma propriedade, quando aplicado garante que nenhuma outra regra sobreponha a regra onde foi utilizado*/
+    left: min(45vw, 600px) !important;
+}
+#whats {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+#whats:hover {
+    transform: scale(1.05);
+}
+.redes-sociais {
+    text-align: right;
+    font-size: 3rem;
+    margin-top: 15px;
 }
