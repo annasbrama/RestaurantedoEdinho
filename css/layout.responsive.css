@@ -1,0 +1,124 @@
+/*dispostivos extra small (telefones em modo retrato, com menos de 576px)*/
+@media (max-width: 780px) {
+    /*GLOBAL*/
+    html {
+        font-size: 75%;
+    }
+    body, .cardapio, .days-week, .box-galeria, #box-equipe, footer {
+        background-size: contain;
+    }
+    .d-none {
+        display: none !important;
+    }
+    .container {
+        width: 100%;
+        padding: 4rem 2rem;
+    }
+    
+    /*HEADER*/
+    header.container {
+        padding-bottom: 0;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        height: 0;
+        transition: all .5s;
+    }
+    header li {
+        margin: 15px 0;
+        width: 100%;
+    }
+    nav {
+        display: none;
+    }
+    #close-menu, .menu-mobile {
+        display: flex;
+    }
+    .menu-mobile {
+        padding-bottom: 1rem;
+    }
+    /*TITLES*/
+    #contato h2 {
+        text-align: center;
+    }
+    #box-whats-delivery h4 {
+        font-size: 3.6rem;
+    }
+    /*BANNER*/
+    .banner {
+        height: auto;
+        padding-top: 0;
+    }
+    .description-banner {
+        width: max(40%, 320px);
+    }
+    .img-titulo-banner img {
+        width: max(25vw, 360px);
+    }
+    /*SECTION CARDÁPIO*/
+    .cardapio {
+        height: auto;
+    }
+    .box-cardapio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    .box-btn-cardapio {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .btn-cardapio {
+        margin-top: 12px;
+        width: 100px;
+    }
+    .dishes-day {
+        grid-template-columns: 1fr;
+        padding: 0 20px 20px;
+    }
+    /*GALERIA*/
+    .box-galeria.container, #box-equipe.container {
+        width: min(90vw, 800vw);
+        padding-bottom: 4rem;
+    }
+    .box-fotos, .box-fotos-equipes {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .small-img {
+        width: 100%;
+    }
+    footer {
+        padding-bottom: 0;
+    }
+    #contato {
+        display: block;
+    }
+    .box-info-contato {
+        width: auto;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #box-whats-delivery div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    #box-whats-delivery p {
+        font-size: 1rem;
+    }
+    #whats i {
+        font-size: 3rem;
+    }
+    .redes-sociais {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
